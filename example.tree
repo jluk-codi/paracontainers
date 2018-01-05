@@ -1,0 +1,407 @@
+scons: Reading SConscript files ...
+Adding dummy base container in |kubernetes|
+Adding dummy base container in |agent|
+Adding dummy base container in |controller|
+Adding dummy base container in |external|
+Adding dummy base container in |openstack|
+Processing dir || with parent ||
+Processing dir |controller/webui| with parent |controller|
+Processing dir |kubernetes| with parent ||
+Processing dir |controller/control| with parent |controller|
+Processing dir |controller/config| with parent |controller|
+Processing dir |agent| with parent ||
+Processing dir |analytics| with parent ||
+Processing dir |controller| with parent ||
+Processing dir |external| with parent ||
+Processing dir |openstack| with parent ||
+{
+    "": {
+        "nodemgr": "['virtual_nodemgr']", 
+        "base": "['virtual_base']"
+    }, 
+    "controller/webui": {
+        "web": "['virtual_controller/webui/web']", 
+        "job": "['virtual_controller/webui/job']", 
+        "base": "['virtual_controller/webui/base']"
+    }, 
+    "kubernetes": {
+        "kube-manager": "['virtual_kubernetes/kube-manager']", 
+        "base": "['virtualbase_kubernetes']", 
+        "vrouter-init": "['virtual_kubernetes/vrouter-init']"
+    }, 
+    "controller/control": {
+        "control": "['virtual_controller/control/control']", 
+        "named": "['virtual_controller/control/named']", 
+        "base": "['virtual_controller/control/base']", 
+        "dns": "['virtual_controller/control/dns']"
+    }, 
+    "controller/config": {
+        "api": "['virtual_controller/config/api']", 
+        "base": "['virtual_controller/config/base']", 
+        "devicemgr": "['virtual_controller/config/devicemgr']", 
+        "svcmonitor": "['virtual_controller/config/svcmonitor']", 
+        "schema": "['virtual_controller/config/schema']"
+    }, 
+    "agent": {
+        "vrouter-init-kernel": "['virtual_agent/vrouter-init-kernel']", 
+        "base": "['virtualbase_agent']", 
+        "vrouter": "['virtual_agent/vrouter']"
+    }, 
+    "analytics": {
+        "snmp-collector": "['virtual_analytics/snmp-collector']", 
+        "query-engine": "['virtual_analytics/query-engine']", 
+        "api": "['virtual_analytics/api']", 
+        "base": "['virtual_analytics/base']", 
+        "alarm-gen": "['virtual_analytics/alarm-gen']", 
+        "collector": "['virtual_analytics/collector']", 
+        "topology": "['virtual_analytics/topology']"
+    }, 
+    "controller": {
+        "base": "['virtualbase_controller']"
+    }, 
+    "external": {
+        "rabbitmq-init": "['virtual_external/rabbitmq-init']", 
+        "zookeeper": "['virtual_external/zookeeper']", 
+        "rabbitmq": "['virtual_external/rabbitmq']", 
+        "kafka": "['virtual_external/kafka']", 
+        "base": "['virtualbase_external']", 
+        "cassandra-init": "['virtual_external/cassandra-init']", 
+        "zookeeper-init": "['virtual_external/zookeeper-init']", 
+        "cassandra": "['virtual_external/cassandra']"
+    }, 
+    "openstack": {
+        "base": "['virtualbase_openstack']", 
+        "neutron-init": "['virtual_openstack/neutron-init']", 
+        "compute-init": "['virtual_openstack/compute-init']"
+    }
+}
+scons: done reading SConscript files.
+scons: Building targets ...
+echo invoked dummy builder /root/contrail-container-builder/containers/base/Dockerfile virtual_base >/dev/null
++-virtual_base
+  +-/root/contrail-container-builder/containers/base/Dockerfile
+  +-/bin/echo
+echo xxx
+echo invoked dummy builder /root/contrail-container-builder/containers/nodemgr/Dockerfile virtual_nodemgr >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/analytics/base/Dockerfile virtual_analytics/base >/dev/null
+echo xxx
+xxx
+echo xxx
+xxx
++-virtual_nodemgr
+echo xxx
+  +-/root/contrail-container-builder/containers/nodemgr/Dockerfile
+echo xxx
+  +-virtual_base
+  | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | +-/bin/echo
+  +-/bin/echo
+xxx
+xxx
+xxx
+echo invoked dummy builder /root/contrail-container-builder/containers/agent/vrouter/Dockerfile virtual_agent/vrouter >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/agent/vrouter-init-kernel/Dockerfile virtual_agent/vrouter-init-kernel >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/controller/config/base/Dockerfile virtual_controller/config/base >/dev/null
++-virtual_analytics/base
+  +-/root/contrail-container-builder/containers/analytics/base/Dockerfile
+echo invoked dummy builder /root/contrail-container-builder/containers/controller/webui/base/Dockerfile virtual_controller/webui/base >/dev/null
+  +-virtual_base
+  | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | +-/bin/echo
+  +-/bin/echo
++-virtual_agent/vrouter
+  +-/root/contrail-container-builder/containers/agent/vrouter/Dockerfile
+  +-virtualbase_agent
+  | +-virtual_base
+  |   +-/root/contrail-container-builder/containers/base/Dockerfile
+  |   +-/bin/echo
+  +-/bin/echo
++-virtual_agent/vrouter-init-kernel
+  +-/root/contrail-container-builder/containers/agent/vrouter-init-kernel/Dockerfile
+  +-virtualbase_agent
+  | +-virtual_base
+  |   +-/root/contrail-container-builder/containers/base/Dockerfile
+  |   +-/bin/echo
+  +-/bin/echo
++-virtual_controller/webui/base
+  +-/root/contrail-container-builder/containers/controller/webui/base/Dockerfile
+  +-virtualbase_controller
+  | +-virtual_base
+  | | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | | +-/bin/echo
+  | +-/bin/echo
+  +-/bin/echo
++-virtual_controller/config/base
+  +-/root/contrail-container-builder/containers/controller/config/base/Dockerfile
+  +-virtualbase_controller
+  | +-virtual_base
+  | | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | | +-/bin/echo
+  | +-/bin/echo
+  +-/bin/echo
+echo invoked dummy builder /root/contrail-container-builder/containers/controller/config/api/Dockerfile virtual_controller/config/api >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/controller/config/svcmonitor/Dockerfile virtual_controller/config/svcmonitor >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/controller/config/schema/Dockerfile virtual_controller/config/schema >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/controller/config/devicemgr/Dockerfile virtual_controller/config/devicemgr >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/controller/webui/web/Dockerfile virtual_controller/webui/web >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/controller/webui/job/Dockerfile virtual_controller/webui/job >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/kubernetes/vrouter-init/Dockerfile virtual_kubernetes/vrouter-init >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/kubernetes/kube-manager/Dockerfile virtual_kubernetes/kube-manager >/dev/null
++-virtual_controller/config/api
+  +-/root/contrail-container-builder/containers/controller/config/api/Dockerfile
+  +-virtual_controller/config/base
+  | +-/root/contrail-container-builder/containers/controller/config/base/Dockerfile
+  | +-virtualbase_controller
+  | | +-virtual_base
+  | | | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | | | +-/bin/echo
+  | | +-/bin/echo
+  | +-/bin/echo
+  +-/bin/echo
++-virtual_controller/config/svcmonitor
+  +-/root/contrail-container-builder/containers/controller/config/svcmonitor/Dockerfile
+  +-virtual_controller/config/base
+  | +-/root/contrail-container-builder/containers/controller/config/base/Dockerfile
+  | +-virtualbase_controller
+  | | +-virtual_base
+  | | | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | | | +-/bin/echo
+  | | +-/bin/echo
+  | +-/bin/echo
+  +-/bin/echo
++-virtual_controller/config/schema
+  +-/root/contrail-container-builder/containers/controller/config/schema/Dockerfile
+  +-virtual_controller/config/base
+  | +-/root/contrail-container-builder/containers/controller/config/base/Dockerfile
+  | +-virtualbase_controller
+  | | +-virtual_base
+  | | | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | | | +-/bin/echo
+  | | +-/bin/echo
+  | +-/bin/echo
+  +-/bin/echo
++-virtual_controller/config/devicemgr
+  +-/root/contrail-container-builder/containers/controller/config/devicemgr/Dockerfile
+  +-virtual_controller/config/base
+  | +-/root/contrail-container-builder/containers/controller/config/base/Dockerfile
+  | +-virtualbase_controller
+  | | +-virtual_base
+  | | | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | | | +-/bin/echo
+  | | +-/bin/echo
+  | +-/bin/echo
+  +-/bin/echo
++-virtual_controller/webui/web
+  +-/root/contrail-container-builder/containers/controller/webui/web/Dockerfile
+  +-virtual_controller/webui/base
+  | +-/root/contrail-container-builder/containers/controller/webui/base/Dockerfile
+  | +-virtualbase_controller
+  | | +-virtual_base
+  | | | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | | | +-/bin/echo
+  | | +-/bin/echo
+  | +-/bin/echo
+  +-/bin/echo
++-virtual_controller/webui/job
+  +-/root/contrail-container-builder/containers/controller/webui/job/Dockerfile
+  +-virtual_controller/webui/base
+  | +-/root/contrail-container-builder/containers/controller/webui/base/Dockerfile
+  | +-virtualbase_controller
+  | | +-virtual_base
+  | | | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | | | +-/bin/echo
+  | | +-/bin/echo
+  | +-/bin/echo
+  +-/bin/echo
++-virtual_kubernetes/vrouter-init
+  +-/root/contrail-container-builder/containers/kubernetes/vrouter-init/Dockerfile
+  +-virtualbase_kubernetes
+  | +-virtual_base
+  |   +-/root/contrail-container-builder/containers/base/Dockerfile
+  |   +-/bin/echo
+  +-/bin/echo
++-virtual_kubernetes/kube-manager
+  +-/root/contrail-container-builder/containers/kubernetes/kube-manager/Dockerfile
+  +-virtualbase_kubernetes
+  | +-virtual_base
+  |   +-/root/contrail-container-builder/containers/base/Dockerfile
+  |   +-/bin/echo
+  +-/bin/echo
+echo invoked dummy builder /root/contrail-container-builder/containers/openstack/neutron-init/Dockerfile virtual_openstack/neutron-init >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/openstack/compute-init/Dockerfile virtual_openstack/compute-init >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/analytics/alarm-gen/Dockerfile virtual_analytics/alarm-gen >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/analytics/query-engine/Dockerfile virtual_analytics/query-engine >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/analytics/snmp-collector/Dockerfile virtual_analytics/snmp-collector >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/analytics/topology/Dockerfile virtual_analytics/topology >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/analytics/api/Dockerfile virtual_analytics/api >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/analytics/collector/Dockerfile virtual_analytics/collector >/dev/null
++-virtual_openstack/neutron-init
+  +-/root/contrail-container-builder/containers/openstack/neutron-init/Dockerfile
+  +-virtualbase_openstack
+  | +-virtual_base
+  |   +-/root/contrail-container-builder/containers/base/Dockerfile
+  |   +-/bin/echo
+  +-/bin/echo
++-virtual_openstack/compute-init
+  +-/root/contrail-container-builder/containers/openstack/compute-init/Dockerfile
+  +-virtualbase_openstack
+  | +-virtual_base
+  |   +-/root/contrail-container-builder/containers/base/Dockerfile
+  |   +-/bin/echo
+  +-/bin/echo
++-virtual_analytics/alarm-gen
+  +-/root/contrail-container-builder/containers/analytics/alarm-gen/Dockerfile
+  +-virtual_analytics/base
+  | +-/root/contrail-container-builder/containers/analytics/base/Dockerfile
+  | +-virtual_base
+  | | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | | +-/bin/echo
+  | +-/bin/echo
+  +-/bin/echo
++-virtual_analytics/query-engine
+  +-/root/contrail-container-builder/containers/analytics/query-engine/Dockerfile
+  +-virtual_analytics/base
+  | +-/root/contrail-container-builder/containers/analytics/base/Dockerfile
+  | +-virtual_base
+  | | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | | +-/bin/echo
+  | +-/bin/echo
+  +-/bin/echo
++-virtual_analytics/topology
+  +-/root/contrail-container-builder/containers/analytics/topology/Dockerfile
+  +-virtual_analytics/base
+  | +-/root/contrail-container-builder/containers/analytics/base/Dockerfile
+  | +-virtual_base
+  | | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | | +-/bin/echo
+  | +-/bin/echo
+  +-/bin/echo
++-virtual_analytics/snmp-collector
+  +-/root/contrail-container-builder/containers/analytics/snmp-collector/Dockerfile
+  +-virtual_analytics/base
+  | +-/root/contrail-container-builder/containers/analytics/base/Dockerfile
+  | +-virtual_base
+  | | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | | +-/bin/echo
+  | +-/bin/echo
+  +-/bin/echo
++-virtual_analytics/api
+  +-/root/contrail-container-builder/containers/analytics/api/Dockerfile
+  +-virtual_analytics/base
+  | +-/root/contrail-container-builder/containers/analytics/base/Dockerfile
+  | +-virtual_base
+  | | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | | +-/bin/echo
+  | +-/bin/echo
+  +-/bin/echo
++-virtual_analytics/collector
+  +-/root/contrail-container-builder/containers/analytics/collector/Dockerfile
+  +-virtual_analytics/base
+  | +-/root/contrail-container-builder/containers/analytics/base/Dockerfile
+  | +-virtual_base
+  | | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | | +-/bin/echo
+  | +-/bin/echo
+  +-/bin/echo
+echo invoked dummy builder /root/contrail-container-builder/containers/external/kafka/Dockerfile virtual_external/kafka >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/external/rabbitmq/Dockerfile virtual_external/rabbitmq >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/external/cassandra-init/Dockerfile virtual_external/cassandra-init >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/external/zookeeper/Dockerfile virtual_external/zookeeper >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/external/cassandra/Dockerfile virtual_external/cassandra >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/external/zookeeper-init/Dockerfile virtual_external/zookeeper-init >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/external/rabbitmq-init/Dockerfile virtual_external/rabbitmq-init >/dev/null
++-virtual_external/kafka
+  +-/root/contrail-container-builder/containers/external/kafka/Dockerfile
+  +-virtualbase_external
+  | +-virtual_base
+  |   +-/root/contrail-container-builder/containers/base/Dockerfile
+  |   +-/bin/echo
+  +-/bin/echo
+echo invoked dummy builder /root/contrail-container-builder/containers/controller/control/base/Dockerfile virtual_controller/control/base >/dev/null
++-virtual_external/rabbitmq
+  +-/root/contrail-container-builder/containers/external/rabbitmq/Dockerfile
+  +-virtualbase_external
+  | +-virtual_base
+  |   +-/root/contrail-container-builder/containers/base/Dockerfile
+  |   +-/bin/echo
+  +-/bin/echo
++-virtual_external/cassandra-init
+  +-/root/contrail-container-builder/containers/external/cassandra-init/Dockerfile
+  +-virtualbase_external
+  | +-virtual_base
+  |   +-/root/contrail-container-builder/containers/base/Dockerfile
+  |   +-/bin/echo
+  +-/bin/echo
++-virtual_external/zookeeper
+  +-/root/contrail-container-builder/containers/external/zookeeper/Dockerfile
+  +-virtualbase_external
+  | +-virtual_base
+  |   +-/root/contrail-container-builder/containers/base/Dockerfile
+  |   +-/bin/echo
+  +-/bin/echo
++-virtual_external/zookeeper-init
+  +-/root/contrail-container-builder/containers/external/zookeeper-init/Dockerfile
+  +-virtualbase_external
+  | +-virtual_base
+  |   +-/root/contrail-container-builder/containers/base/Dockerfile
+  |   +-/bin/echo
+  +-/bin/echo
++-virtual_external/cassandra
+  +-/root/contrail-container-builder/containers/external/cassandra/Dockerfile
+  +-virtualbase_external
+  | +-virtual_base
+  |   +-/root/contrail-container-builder/containers/base/Dockerfile
+  |   +-/bin/echo
+  +-/bin/echo
++-virtual_external/rabbitmq-init
+  +-/root/contrail-container-builder/containers/external/rabbitmq-init/Dockerfile
+  +-virtualbase_external
+  | +-virtual_base
+  |   +-/root/contrail-container-builder/containers/base/Dockerfile
+  |   +-/bin/echo
+  +-/bin/echo
++-virtual_controller/control/base
+  +-/root/contrail-container-builder/containers/controller/control/base/Dockerfile
+  +-virtualbase_controller
+  | +-virtual_base
+  | | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | | +-/bin/echo
+  | +-/bin/echo
+  +-/bin/echo
+echo invoked dummy builder /root/contrail-container-builder/containers/controller/control/named/Dockerfile virtual_controller/control/named >/dev/null
+echo invoked dummy builder /root/contrail-container-builder/containers/controller/control/dns/Dockerfile virtual_controller/control/dns >/dev/null
++-virtual_controller/control/named
+  +-/root/contrail-container-builder/containers/controller/control/named/Dockerfile
+echo invoked dummy builder /root/contrail-container-builder/containers/controller/control/control/Dockerfile virtual_controller/control/control >/dev/null
+  +-virtual_controller/control/base
+  | +-/root/contrail-container-builder/containers/controller/control/base/Dockerfile
+  | +-virtualbase_controller
+  | | +-virtual_base
+  | | | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | | | +-/bin/echo
+  | | +-/bin/echo
+  | +-/bin/echo
+  +-/bin/echo
++-virtual_controller/control/dns
+  +-/root/contrail-container-builder/containers/controller/control/dns/Dockerfile
+  +-virtual_controller/control/base
+  | +-/root/contrail-container-builder/containers/controller/control/base/Dockerfile
+  | +-virtualbase_controller
+  | | +-virtual_base
+  | | | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | | | +-/bin/echo
+  | | +-/bin/echo
+  | +-/bin/echo
+  +-/bin/echo
++-virtual_controller/control/control
+  +-/root/contrail-container-builder/containers/controller/control/control/Dockerfile
+  +-virtual_controller/control/base
+  | +-/root/contrail-container-builder/containers/controller/control/base/Dockerfile
+  | +-virtualbase_controller
+  | | +-virtual_base
+  | | | +-/root/contrail-container-builder/containers/base/Dockerfile
+  | | | +-/bin/echo
+  | | +-/bin/echo
+  | +-/bin/echo
+  +-/bin/echo
+scons: done building targets.
